@@ -1,18 +1,16 @@
 package com.backend.web;
 
 import com.backend.model.enumeration.TiposEstanteria;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.persistence.*;
-import java.util.UUID;
+import java.io.Serializable;
 
-@Data
-@AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
-public class EstanteriaDto {
-
+@AllArgsConstructor
+@Builder
+public class EstanteriaDto implements Serializable {
 	private long id;
 	private AlmacenDto almacen;
 	private TiposEstanteria tipo;
